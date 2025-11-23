@@ -586,6 +586,129 @@ const Index = () => {
             </Card>
           </div>
 
+          <div className="mt-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Свадебная съемка</h2>
+            <p className="text-muted-foreground text-lg mb-12">
+              Сохраните самые важные моменты вашего дня
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-8">
+            <Card className="relative hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-primary/30">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                💍 СВАДЕБНЫЙ
+              </div>
+              <CardHeader className="text-center pb-8 pt-12">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Icon name="Heart" className="text-primary" size={40} />
+                </div>
+                <CardTitle className="text-3xl mb-2">Ничего лишнего</CardTitle>
+                <CardDescription className="text-base">
+                  Основные моменты торжества
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  <div className="text-center">
+                    <div className="text-5xl font-bold text-primary mb-2">35 000₽</div>
+                    <p className="text-muted-foreground">полный пакет</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <Icon name="MapPin" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Съемка в ЗАГСе</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Camera" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Прогулочная фотосессия</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Gift" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm font-semibold">🎁 Обработка снимков на выбор в подарок</span>
+                    </div>
+                  </div>
+
+                  <Button 
+                    className="w-full text-lg py-6" 
+                    size="lg"
+                    onClick={() => {
+                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=35000`, "_blank");
+                      toast({
+                        title: "Переход к оплате",
+                        description: "Оплата через СБП — быстро и безопасно",
+                      });
+                    }}
+                  >
+                    <Icon name="CreditCard" className="mr-2" size={20} />
+                    Оплатить онлайн
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-accent/50 bg-gradient-to-br from-accent/5 to-primary/5">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-accent to-primary text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                ⭐ ПОПУЛЯРНЫЙ
+              </div>
+              <CardHeader className="text-center pb-8 pt-12">
+                <div className="w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Icon name="Crown" className="text-accent" size={40} />
+                </div>
+                <CardTitle className="text-3xl mb-2">Полный фарш</CardTitle>
+                <CardDescription className="text-base">
+                  Весь день с вами
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  <div className="text-center">
+                    <div className="text-5xl font-bold text-accent mb-2">55 000₽</div>
+                    <p className="text-muted-foreground">максимальный пакет</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Home" className="text-accent flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Съемка сборов жениха и невесты</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="MapPin" className="text-accent flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Съемка в ЗАГСе</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Camera" className="text-accent flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Прогулочная фотосессия</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="PartyPopper" className="text-accent flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Съемка банкета</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Image" className="text-accent flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm font-semibold">🎁 100 обработанных фото на выбор</span>
+                    </div>
+                  </div>
+
+                  <Button 
+                    className="w-full text-lg py-6 bg-gradient-to-r from-accent to-primary hover:scale-105 transition-all" 
+                    size="lg"
+                    onClick={() => {
+                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=55000`, "_blank");
+                      toast({
+                        title: "Переход к оплате",
+                        description: "Оплата через СБП — быстро и безопасно",
+                      });
+                    }}
+                  >
+                    <Icon name="CreditCard" className="mr-2" size={20} />
+                    Оплатить онлайн
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="mt-12 text-center max-w-3xl mx-auto">
             <Card className="bg-muted/50">
               <CardContent className="pt-6">
