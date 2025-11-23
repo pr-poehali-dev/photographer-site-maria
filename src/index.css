@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,24 +7,24 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 25% 10%;
+    --foreground: 224 71% 4%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 10%;
+    --card-foreground: 224 71% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 10%;
+    --popover-foreground: 224 71% 4%;
 
-    --primary: 43 74% 49%;
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 351 53% 75%;
-    --secondary-foreground: 220 25% 10%;
+    --secondary: 270 60% 70%;
+    --secondary-foreground: 224 71% 4%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 270 20% 98%;
+    --muted-foreground: 224 15% 45%;
 
-    --accent: 340 82% 52%;
+    --accent: 199 89% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -99,7 +99,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   h1,
@@ -108,9 +108,9 @@
   h4,
   h5,
   h6 {
-    font-family: "Playfair Display", serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.03em;
   }
 }
 
@@ -128,7 +128,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #d4af37 0%, #f4e4c1 50%, #c9a961 100%);
+    background: linear-gradient(135deg, #9b87f5 0%, #0ea5e9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -136,8 +136,20 @@
 
   .glow-effect {
     box-shadow:
-      0 0 20px rgba(212, 175, 55, 0.3),
-      0 0 40px rgba(212, 175, 55, 0.2);
+      0 0 30px rgba(155, 135, 245, 0.25),
+      0 0 60px rgba(155, 135, 245, 0.15);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .neumorphic {
+    box-shadow:
+      8px 8px 20px rgba(155, 135, 245, 0.1),
+      -8px -8px 20px rgba(255, 255, 255, 0.9);
   }
 
   @keyframes fade-in {
