@@ -471,8 +471,9 @@ const Index = () => {
               <CardContent>
                 <div className="space-y-6">
                   <div className="text-center">
+                    <div className="text-2xl text-muted-foreground line-through mb-1">11 776₽</div>
                     <div className="text-5xl font-bold text-primary mb-2">5 888₽</div>
-                    <p className="text-muted-foreground">за 1 час</p>
+                    <p className="text-muted-foreground">за 1 час • скидка 50%</p>
                   </div>
                   
                   <div className="space-y-3">
@@ -530,8 +531,9 @@ const Index = () => {
               <CardContent>
                 <div className="space-y-6">
                   <div className="text-center">
+                    <div className="text-2xl text-muted-foreground line-through mb-1">19 998₽</div>
                     <div className="text-5xl font-bold text-primary mb-2">9 999₽</div>
-                    <p className="text-muted-foreground">за 2 часа</p>
+                    <p className="text-muted-foreground">за 2 часа • скидка 50%</p>
                   </div>
                   
                   <div className="space-y-3">
@@ -662,8 +664,9 @@ const Index = () => {
               <CardContent>
                 <div className="space-y-6">
                   <div className="text-center">
+                    <div className="text-2xl text-muted-foreground line-through mb-1">70 000₽</div>
                     <div className="text-5xl font-bold text-primary mb-2">35 000₽</div>
-                    <p className="text-muted-foreground">полный пакет</p>
+                    <p className="text-muted-foreground">полный пакет • скидка 50%</p>
                   </div>
                   
                   <div className="space-y-3">
@@ -715,8 +718,9 @@ const Index = () => {
               <CardContent>
                 <div className="space-y-6">
                   <div className="text-center">
+                    <div className="text-2xl text-muted-foreground line-through mb-1">110 000₽</div>
                     <div className="text-5xl font-bold text-accent mb-2">55 000₽</div>
-                    <p className="text-muted-foreground">максимальный пакет</p>
+                    <p className="text-muted-foreground">максимальный пакет • скидка 50%</p>
                   </div>
                   
                   <div className="space-y-3">
