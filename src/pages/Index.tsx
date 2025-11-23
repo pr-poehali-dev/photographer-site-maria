@@ -57,6 +57,13 @@ const Index = () => {
               <Button
                 variant="ghost"
                 size="sm"
+                onClick={() => document.getElementById("packages")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Пакеты
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Портфолио
@@ -256,6 +263,215 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="packages" className="py-20 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Пакеты услуг</h2>
+            <p className="text-muted-foreground text-lg">
+              Выберите оптимальный пакет и оплатите онлайн
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <Card className="relative hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2">
+              <CardHeader className="text-center pb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Icon name="Sparkles" className="text-primary" size={40} />
+                </div>
+                <CardTitle className="text-3xl mb-2">Пакет №1</CardTitle>
+                <CardDescription className="text-base">
+                  Идеально для портретов
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  <div className="text-center">
+                    <div className="text-5xl font-bold text-primary mb-2">5 888₽</div>
+                    <p className="text-muted-foreground">за 1 час</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">1 час фотосессии</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Home" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Аренда студии включена</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Camera" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Профессиональная съемка</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Wand2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Ретушь 5 снимков на выбор</span>
+                    </div>
+                  </div>
+
+                  <Button 
+                    className="w-full text-lg py-6" 
+                    size="lg"
+                    onClick={() => {
+                      window.open(`https://yoomoney.ru/to/4100118595968686/5888`, "_blank");
+                      toast({
+                        title: "Переход к оплате",
+                        description: "Вы будете перенаправлены на безопасную страницу оплаты",
+                      });
+                    }}
+                  >
+                    <Icon name="CreditCard" className="mr-2" size={20} />
+                    Оплатить онлайн
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-primary bg-gradient-to-b from-primary/5 to-background">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <Badge className="bg-primary text-white px-6 py-2 text-sm">
+                  Популярный выбор
+                </Badge>
+              </div>
+              <CardHeader className="text-center pb-8 pt-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Icon name="Star" className="text-white" size={40} />
+                </div>
+                <CardTitle className="text-3xl mb-2">Пакет №2</CardTitle>
+                <CardDescription className="text-base">
+                  Оптимальный вариант
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  <div className="text-center">
+                    <div className="text-5xl font-bold text-primary mb-2">9 999₽</div>
+                    <p className="text-muted-foreground">за 2 часа</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">2 часа фотосессии</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Home" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Аренда студии включена</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Camera" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Профессиональная съемка</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Wand2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm font-semibold">Ретушь 15 снимков на выбор</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Palette" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Смена образов и локаций</span>
+                    </div>
+                  </div>
+
+                  <Button 
+                    className="w-full text-lg py-6" 
+                    size="lg"
+                    onClick={() => {
+                      window.open(`https://yoomoney.ru/to/4100118595968686/9999`, "_blank");
+                      toast({
+                        title: "Переход к оплате",
+                        description: "Вы будете перенаправлены на безопасную страницу оплаты",
+                      });
+                    }}
+                  >
+                    <Icon name="CreditCard" className="mr-2" size={20} />
+                    Оплатить онлайн
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2">
+              <CardHeader className="text-center pb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Icon name="Crown" className="text-accent" size={40} />
+                </div>
+                <CardTitle className="text-3xl mb-2">Пакет №3</CardTitle>
+                <CardDescription className="text-base">
+                  Максимальный результат
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  <div className="text-center">
+                    <div className="text-5xl font-bold text-primary mb-2">14 999₽</div>
+                    <p className="text-muted-foreground">за 3.5 часа</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">3.5 часа фотосессии</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Home" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Аренда студии включена</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Camera" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Профессиональная съемка</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Wand2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm font-semibold">Ретушь 30 снимков на выбор</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Palette" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Несколько образов и локаций</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Gift" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-sm">Все исходники в подарок</span>
+                    </div>
+                  </div>
+
+                  <Button 
+                    className="w-full text-lg py-6" 
+                    size="lg"
+                    onClick={() => {
+                      window.open(`https://yoomoney.ru/to/4100118595968686/14999`, "_blank");
+                      toast({
+                        title: "Переход к оплате",
+                        description: "Вы будете перенаправлены на безопасную страницу оплаты",
+                      });
+                    }}
+                  >
+                    <Icon name="CreditCard" className="mr-2" size={20} />
+                    Оплатить онлайн
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center max-w-3xl mx-auto">
+            <Card className="bg-muted/50">
+              <CardContent className="pt-6">
+                <div className="flex items-start gap-4">
+                  <Icon name="ShieldCheck" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <div className="text-left">
+                    <h3 className="font-semibold mb-2">Безопасная оплата</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Оплата производится через защищенный сервис ЮMoney. Средства поступают напрямую на карту Сбербанка. 
+                      После оплаты свяжитесь со мной в WhatsApp для согласования даты и времени съемки.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
