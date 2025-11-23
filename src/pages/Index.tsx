@@ -183,7 +183,7 @@ const Index = () => {
                       <Button
                         className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold"
                         onClick={async () => {
-                          const paymentWindow = window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=2990`, "_blank");
+                          const paymentWindow = window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=2990`, "_blank");
                           
                           toast({
                             title: "Переход к оплате",
@@ -499,7 +499,7 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=5888`, "_blank");
+                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=5888`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
@@ -563,7 +563,7 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=9999`, "_blank");
+                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=9999`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
@@ -625,7 +625,7 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=14999`, "_blank");
+                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=14999`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
@@ -688,7 +688,7 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=35000`, "_blank");
+                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=35000`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
@@ -750,7 +750,7 @@ const Index = () => {
                     className="w-full text-lg py-6 bg-gradient-to-r from-accent to-primary hover:scale-105 transition-all" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=55000`, "_blank");
+                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=55000`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
