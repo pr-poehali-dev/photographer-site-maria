@@ -167,6 +167,58 @@ const Index = () => {
                 </Button>
               </div>
 
+              <div className="mt-6">
+                <Card className="border-2 border-green-500/30 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
+                  <CardContent className="p-4">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                          <Icon name="GraduationCap" className="text-green-500" size={24} />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-lg">Обучиться за 7 дней</h3>
+                          <p className="text-sm text-muted-foreground">Полный курс фотографии для новичков</p>
+                        </div>
+                      </div>
+                      <Button
+                        className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold"
+                        onClick={async () => {
+                          const paymentWindow = window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=2990`, "_blank");
+                          
+                          toast({
+                            title: "Переход к оплате",
+                            description: "После оплаты гайд скачается автоматически",
+                          });
+
+                          const checkPayment = setInterval(async () => {
+                            if (paymentWindow?.closed) {
+                              clearInterval(checkPayment);
+                              
+                              setTimeout(async () => {
+                                const link = document.createElement('a');
+                                link.href = '/guide-7day-photo.pdf';
+                                link.download = '7-day-photo-guide.pdf';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                                
+                                toast({
+                                  title: "Спасибо за покупку! 🎓",
+                                  description: "Гайд начал скачиваться",
+                                });
+                              }, 2000);
+                            }
+                          }, 1000);
+                        }}
+                      >
+                        <Icon name="Download" className="mr-2" size={18} />
+                        2990₽
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
               <div className="flex items-center gap-8 text-sm">
                 <div className="flex items-center gap-2">
                   <Icon name="Users" size={18} className="text-primary" />

@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Test OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedHeaders": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "name": "Test download with payment confirmation",
+      "method": "GET",
+      "path": "/?payment=confirmed",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "download_url": "/guide-7day-photo.pdf"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test access without payment",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 403,
+      "expectedBody": {
+        "success": false
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
