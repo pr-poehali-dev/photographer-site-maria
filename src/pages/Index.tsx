@@ -898,6 +898,201 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="reviews" className="py-20 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
+              <Icon name="Star" className="mr-2" size={16} />
+              Отзывы учеников
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Они уже научились фотографировать за 7 дней</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Реальные истории людей, которые прошли курс
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-2xl font-bold">
+                    А
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Анна Соколова</h3>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Icon key={i} name="Star" className="text-yellow-500 fill-yellow-500" size={16} />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Я всегда мечтала научиться фотографировать, но думала, что это сложно. Курс просто супер! За неделю я поняла все основы, теперь снимаю детей и друзей. Задания помогли закрепить каждую тему."
+                </p>
+                <Badge variant="outline" className="text-xs">
+                  <Icon name="Clock" className="mr-1" size={12} />
+                  Прошла курс 2 недели назад
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-primary/30">
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center text-2xl font-bold">
+                    М
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Максим Петров</h3>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Icon key={i} name="Star" className="text-yellow-500 fill-yellow-500" size={16} />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Раньше фоткал только на телефон и всё получалось как-то скучно. После курса понял про свет, композицию, начал снимать на камеру. Уже получил первый заказ на съемку! Спасибо за четкую структуру."
+                </p>
+                <Badge variant="outline" className="text-xs">
+                  <Icon name="TrendingUp" className="mr-1" size={12} />
+                  Уже работает фотографом
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center text-2xl font-bold">
+                    Е
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Елена Кузнецова</h3>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Icon key={i} name="Star" className="text-yellow-500 fill-yellow-500" size={16} />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Курс просто находка! Всё разжевано, примеры понятные. Самое крутое — практические задания. Именно они помогли закрепить материал. Теперь фотографирую для своего блога, лайков стало в 3 раза больше!"
+                </p>
+                <Badge variant="outline" className="text-xs">
+                  <Icon name="Camera" className="mr-1" size={12} />
+                  Развивает Instagram-блог
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center text-2xl font-bold">
+                    Д
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Дмитрий Волков</h3>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Icon key={i} name="Star" className="text-yellow-500 fill-yellow-500" size={16} />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Думал, что для фотографии нужна дорогая камера. Оказалось — нет! Прошел курс, снимал на телефон, результат меня поразил. Особенно понравился день про свет — это прям магия какая-то!"
+                </p>
+                <Badge variant="outline" className="text-xs">
+                  <Icon name="Smartphone" className="mr-1" size={12} />
+                  Снимает на телефон
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center text-2xl font-bold">
+                    О
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Ольга Смирнова</h3>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Icon key={i} name="Star" className="text-yellow-500 fill-yellow-500" size={16} />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Прошла кучу курсов, но они были либо слишком сложные, либо поверхностные. Этот — идеальный баланс! За 7 дней получила всё, что нужно новичку. И главное — гайд всегда под рукой, перечитываю."
+                </p>
+                <Badge variant="outline" className="text-xs">
+                  <Icon name="Heart" className="mr-1" size={12} />
+                  Снимает семейные моменты
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center text-2xl font-bold">
+                    И
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Игорь Новиков</h3>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Icon key={i} name="Star" className="text-yellow-500 fill-yellow-500" size={16} />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Не ожидал, что за такую цену получу столько ценной информации. Обычно такие курсы стоят в 10 раз дороже. Задания заставили практиковаться каждый день — именно так и надо учиться!"
+                </p>
+                <Badge variant="outline" className="text-xs">
+                  <Icon name="Zap" className="mr-1" size={12} />
+                  Прошел курс за 5 дней
+                </Badge>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-16 text-center">
+            <Card className="max-w-4xl mx-auto bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30">
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="Users" className="text-white" size={40} />
+                  </div>
+                  <div className="text-center md:text-left flex-1">
+                    <h3 className="text-2xl font-bold mb-2">Присоединяйтесь к 847 ученикам</h3>
+                    <p className="text-muted-foreground">
+                      Которые уже освоили фотографию с нуля за 7 дней
+                    </p>
+                  </div>
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-primary to-accent text-white font-bold px-8 py-6 text-lg"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    <Icon name="GraduationCap" className="mr-2" size={20} />
+                    Начать обучение
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="faq" className="py-20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
