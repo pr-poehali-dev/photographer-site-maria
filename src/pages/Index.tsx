@@ -6,6 +6,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 import { useToast } from "@/hooks/use-toast";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Index = () => {
   const { toast } = useToast();
@@ -67,6 +73,20 @@ const Index = () => {
                 onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Портфолио
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => document.getElementById("trends")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Тренды
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                FAQ
               </Button>
               <Button
                 variant="ghost"
@@ -472,6 +492,210 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="trends" className="py-20 bg-muted/30 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
+              <Icon name="TrendingUp" className="mr-2" size={16} />
+              Актуальные тренды
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Тренды фотосессий 2025-2026</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Будьте в курсе самых актуальных направлений в фотографии
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <div className="h-2 bg-gradient-to-r from-pink-400 to-rose-500"></div>
+              <CardHeader>
+                <div className="w-14 h-14 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl flex items-center justify-center mb-4">
+                  <Icon name="Flower2" className="text-rose-500" size={28} />
+                </div>
+                <CardTitle className="text-xl">Нежный минимализм</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-sm">
+                  Пастельные тона, чистые линии и воздушные образы. Акцент на естественность и простоту с пудровыми оттенками розового, бежевого и айвори.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <div className="h-2 bg-gradient-to-r from-amber-400 to-orange-500"></div>
+              <CardHeader>
+                <div className="w-14 h-14 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl flex items-center justify-center mb-4">
+                  <Icon name="Sparkles" className="text-orange-500" size={28} />
+                </div>
+                <CardTitle className="text-xl">Ретро-эстетика 90-х</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-sm">
+                  Возвращение пленочной фотографии с характерной зернистостью, насыщенные цвета, винтажная одежда и аксессуары. Ностальгия в каждом кадре.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <div className="h-2 bg-gradient-to-r from-emerald-400 to-teal-500"></div>
+              <CardHeader>
+                <div className="w-14 h-14 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-xl flex items-center justify-center mb-4">
+                  <Icon name="Trees" className="text-emerald-500" size={28} />
+                </div>
+                <CardTitle className="text-xl">Eco-натуральность</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-sm">
+                  Съемки на природе, натуральный макияж, экологичные материалы. Зеленые оттенки, живые цветы и естественное освещение создают атмосферу гармонии.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <div className="h-2 bg-gradient-to-r from-purple-400 to-violet-500"></div>
+              <CardHeader>
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-violet-100 rounded-xl flex items-center justify-center mb-4">
+                  <Icon name="Moon" className="text-violet-500" size={28} />
+                </div>
+                <CardTitle className="text-xl">Темная романтика</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-sm">
+                  Глубокие темные тона, драматичное освещение, таинственные образы. Черный, бордовый, темно-синий создают атмосферу магии и загадочности.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <div className="h-2 bg-gradient-to-r from-blue-400 to-cyan-500"></div>
+              <CardHeader>
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl flex items-center justify-center mb-4">
+                  <Icon name="Layers" className="text-cyan-500" size={28} />
+                </div>
+                <CardTitle className="text-xl">Многослойность образов</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-sm">
+                  Игра с текстурами, наслоение тканей, объемные аксессуары. Создание глубины через многослойность одежды и декора для выразительных кадров.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <div className="h-2 bg-gradient-to-r from-red-400 to-pink-500"></div>
+              <CardHeader>
+                <div className="w-14 h-14 bg-gradient-to-br from-red-100 to-pink-100 rounded-xl flex items-center justify-center mb-4">
+                  <Icon name="Flame" className="text-red-500" size={28} />
+                </div>
+                <CardTitle className="text-xl">Яркий максимализм</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-sm">
+                  Насыщенные цвета, смелые сочетания, выразительные позы. Дерзкие образы с яркими акцентами для тех, кто не боится быть в центре внимания.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-6"
+              onClick={() => window.open(whatsappLink, "_blank")}
+            >
+              <Icon name="MessageCircle" className="mr-2" size={20} />
+              Обсудить идею для съемки
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="py-20 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Часто задаваемые вопросы</h2>
+            <p className="text-muted-foreground text-lg">
+              Ответы на популярные вопросы о фотосессиях
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="border rounded-xl px-6 bg-card shadow-sm hover:shadow-md transition-shadow">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
+                  <div className="flex items-center gap-3 text-left">
+                    <Icon name="Clock" className="text-primary flex-shrink-0" size={24} />
+                    <span>С какого момента начинается отсчет времени фотосессии?</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6 pl-11">
+                  С момента прихода в студию или на локацию. Время начинает отсчитываться с момента вашего прибытия и готовности к съемке.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border rounded-xl px-6 bg-card shadow-sm hover:shadow-md transition-shadow">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
+                  <div className="flex items-center gap-3 text-left">
+                    <Icon name="Home" className="text-primary flex-shrink-0" size={24} />
+                    <span>Аренда студии входит в цену фотосессии?</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6 pl-11">
+                  Нет, аренда студии оплачивается отдельно. Стоимость варьируется в зависимости от выбранной студии и времени аренды. Я помогу подобрать оптимальный вариант.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border rounded-xl px-6 bg-card shadow-sm hover:shadow-md transition-shadow">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
+                  <div className="flex items-center gap-3 text-left">
+                    <Icon name="Wand2" className="text-primary flex-shrink-0" size={24} />
+                    <span>В стоимость фотосессии входит обработка фотографий?</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6 pl-11">
+                  Если приобретать пакет, то обработка входит в стоимость. Если нет, то обработка одного фото стоит 100 рублей (ретушь + цветокоррекция).
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border rounded-xl px-6 bg-card shadow-sm hover:shadow-md transition-shadow">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
+                  <div className="flex items-center gap-3 text-left">
+                    <Icon name="DollarSign" className="text-primary flex-shrink-0" size={24} />
+                    <span>А если мы потратим не час, а полчаса времени, стоимость будет вдвое меньше?</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6 pl-11">
+                  Нет, конечно. Тарификация производится по стоимости полного часа, независимо от фактически потраченного времени. Это связано с подготовкой оборудования и резервированием времени.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <div className="mt-12 text-center">
+              <Card className="bg-primary/5 border-primary/20">
+                <CardContent className="pt-6">
+                  <div className="flex flex-col items-center gap-4">
+                    <Icon name="HelpCircle" className="text-primary" size={40} />
+                    <div>
+                      <h3 className="font-semibold text-xl mb-2">Не нашли ответ на свой вопрос?</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Напишите мне в WhatsApp, и я с радостью отвечу на все ваши вопросы!
+                      </p>
+                      <Button 
+                        size="lg"
+                        onClick={() => window.open(whatsappLink, "_blank")}
+                      >
+                        <Icon name="MessageCircle" className="mr-2" size={20} />
+                        Задать вопрос в WhatsApp
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
