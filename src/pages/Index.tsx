@@ -446,10 +446,10 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://yoomoney.ru/to/4100118595968686/5888`, "_blank");
+                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=5888`, "_blank");
                       toast({
                         title: "Переход к оплате",
-                        description: "Вы будете перенаправлены на безопасную страницу оплаты",
+                        description: "Оплата через СБП — быстро и безопасно",
                       });
                     }}
                   >
@@ -509,10 +509,10 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://yoomoney.ru/to/4100118595968686/9999`, "_blank");
+                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=9999`, "_blank");
                       toast({
                         title: "Переход к оплате",
-                        description: "Вы будете перенаправлены на безопасную страницу оплаты",
+                        description: "Оплата через СБП — быстро и безопасно",
                       });
                     }}
                   >
@@ -571,10 +571,10 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://yoomoney.ru/to/4100118595968686/14999`, "_blank");
+                      window.open(`https://pay.cloudtips.ru/p/38aba8da?amount=14999`, "_blank");
                       toast({
                         title: "Переход к оплате",
-                        description: "Вы будете перенаправлены на безопасную страницу оплаты",
+                        description: "Оплата через СБП — быстро и безопасно",
                       });
                     }}
                   >
@@ -594,7 +594,7 @@ const Index = () => {
                   <div className="text-left">
                     <h3 className="font-semibold mb-2">Безопасная оплата</h3>
                     <p className="text-sm text-muted-foreground">
-                      Оплата производится через защищенный сервис ЮMoney. Средства поступают напрямую на карту Сбербанка. 
+                      Оплата через СБП (Систему Быстрых Платежей). Деньги поступают мгновенно. 
                       После оплаты свяжитесь со мной в WhatsApp для согласования даты и времени съемки.
                     </p>
                   </div>
