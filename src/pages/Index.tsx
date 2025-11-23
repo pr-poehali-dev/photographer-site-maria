@@ -117,47 +117,64 @@ const Index = () => {
         <div className="container mx-auto px-4 z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left animate-fade-in">
-              <Badge className="mb-6 text-sm px-5 py-2 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
-                <Icon name="Zap" className="mr-2" size={14} />
-                Профессиональная фотография
+              <Badge className="mb-6 text-sm px-5 py-2 bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 animate-pulse">
+                <Icon name="Flame" className="mr-2" size={14} />
+                Только сегодня -50%
               </Badge>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[1.1]">
-                Ваши эмоции в
+                Влюбите в себя
                 <br />
-                <span className="text-gradient">идеальных кадрах</span>
+                <span className="text-gradient">за 1 час съёмки</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed">
-                Создаю атмосферные фотографии, которые передают настроение и рассказывают истории
+              <p className="text-lg md:text-xl text-foreground/90 max-w-xl mb-6 leading-relaxed font-medium">
+                Получите 50 идеальных кадров, которые наберут тысячи лайков в Instagram
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-5 mb-8 border-2 border-primary/20">
+                <div className="flex items-start gap-3">
+                  <Icon name="Gift" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <div>
+                    <div className="font-bold text-lg mb-1">🔥 Акция заканчивается через:</div>
+                    <div className="text-3xl font-black text-gradient mb-2">23:59 сегодня</div>
+                    <div className="text-sm text-muted-foreground">
+                      ✓ Бесплатная ретушь 10 фото (экономия 1000₽)
+                      <br />
+                      ✓ Помощь со стилем и локацией
+                      <br />
+                      ✓ Гарантия результата или вернем деньги
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
                   size="lg"
-                  className="text-base px-8 py-6 bg-primary hover:bg-primary/90 hover:scale-105 transition-all shadow-lg hover:shadow-xl rounded-2xl"
+                  className="text-base px-8 py-7 bg-gradient-to-r from-primary to-accent hover:scale-105 transition-all shadow-xl hover:shadow-2xl rounded-2xl text-white font-bold glow-effect"
                   onClick={() => document.getElementById("packages")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  <Icon name="Calendar" className="mr-2" size={20} />
-                  Записаться на съемку
+                  <Icon name="Zap" className="mr-2" size={20} />
+                  Забрать скидку 50%
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-base px-8 py-6 border-2 hover:bg-muted/50 rounded-2xl"
+                  className="text-base px-8 py-7 border-2 hover:bg-muted/50 rounded-2xl"
                   onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   <Icon name="Image" className="mr-2" size={20} />
-                  Посмотреть работы
+                  Примеры работ
                 </Button>
               </div>
 
-              <div className="flex items-center gap-8 text-sm text-muted-foreground">
+              <div className="flex items-center gap-8 text-sm">
                 <div className="flex items-center gap-2">
-                  <Icon name="Check" size={18} className="text-primary" />
-                  <span>500+ довольных клиентов</span>
+                  <Icon name="Users" size={18} className="text-primary" />
+                  <span className="font-medium">Сегодня записалось: <strong className="text-accent">8 человек</strong></span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Icon name="Star" size={18} className="text-primary" />
-                  <span>Рейтинг 4.9/5</span>
+                  <Icon name="Clock" size={18} className="text-primary" />
+                  <span className="font-medium">Осталось мест: <strong className="text-accent">2</strong></span>
                 </div>
               </div>
             </div>
@@ -304,40 +321,77 @@ const Index = () => {
       <section id="portfolio" className="py-20 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Портфолио</h2>
+            <Badge className="mb-4 bg-primary/10 text-primary border-0 text-sm px-5 py-2">
+              <Icon name="TrendingUp" className="mr-2" size={14} />
+              До и После
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Результаты, которые продают</h2>
             <p className="text-muted-foreground text-lg">
-              Примеры моих работ
+              Обычные снимки VS профессиональная съемка
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="relative group overflow-hidden rounded-2xl aspect-[4/5] shadow-lg">
-              <img
-                src="https://cdn.poehali.dev/projects/924f3d0c-2086-48cf-8be8-294b5e77150c/files/6c2f1418-513e-4189-bd67-e057ec45f140.jpg"
-                alt="Студийная фотосессия"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Студийная съемка</h3>
-                  <p className="text-sm">Профессиональное освещение и атмосфера</p>
+            <Card className="border-0 neumorphic overflow-hidden rounded-3xl">
+              <div className="relative aspect-[3/4]">
+                <img
+                  src="https://cdn.poehali.dev/projects/924f3d0c-2086-48cf-8be8-294b5e77150c/files/339f5376-229e-46b1-8907-f5c5ebf50537.jpg"
+                  alt="До съемки - обычное фото"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  ❌ ДО
                 </div>
               </div>
-            </div>
+              <CardContent className="p-5">
+                <p className="text-sm text-muted-foreground text-center">
+                  Обычное фото на телефон без обработки
+                </p>
+              </CardContent>
+            </Card>
 
-            <div className="relative group overflow-hidden rounded-2xl aspect-[4/5] shadow-lg">
-              <img
-                src="https://cdn.poehali.dev/projects/924f3d0c-2086-48cf-8be8-294b5e77150c/files/a85d8ebd-61fd-4bfa-93e1-e8dfe1ccd562.jpg"
-                alt="Выездная фотосессия"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Выездная съемка</h3>
-                  <p className="text-sm">Естественный свет и живые эмоции</p>
+            <Card className="border-0 neumorphic overflow-hidden rounded-3xl relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                ⭐ ПОСЛЕ
+              </div>
+              <div className="relative aspect-[3/4]">
+                <img
+                  src="https://cdn.poehali.dev/projects/924f3d0c-2086-48cf-8be8-294b5e77150c/files/6c2f1418-513e-4189-bd67-e057ec45f140.jpg"
+                  alt="После - профессиональная съемка"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+                  ✓ ПОСЛЕ
                 </div>
               </div>
-            </div>
+              <CardContent className="p-5">
+                <p className="text-sm font-medium text-center">
+                  Профессиональная съемка + ретушь + стиль
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Card className="max-w-2xl mx-auto border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl">
+              <CardContent className="p-8">
+                <div className="flex flex-col items-center gap-4">
+                  <Icon name="Sparkles" className="text-primary" size={48} />
+                  <h3 className="text-2xl font-bold">Хотите такой же результат?</h3>
+                  <p className="text-muted-foreground">
+                    Запишитесь сегодня со скидкой 50% и получите бонусом стилиста
+                  </p>
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-primary to-accent text-white px-10 py-6 rounded-2xl text-lg font-bold hover:scale-105 transition-all glow-effect"
+                    onClick={() => document.getElementById("packages")?.scrollIntoView({ behavior: "smooth" })}
+                  >
+                    <Icon name="Zap" className="mr-2" size={22} />
+                    Записаться со скидкой
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
