@@ -499,11 +499,24 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=5888`, "_blank");
+                      const paymentWindow = window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=5888`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
                       });
+
+                      const checkPayment = setInterval(() => {
+                        if (paymentWindow?.closed) {
+                          clearInterval(checkPayment);
+                          toast({
+                            title: "Спасибо за оплату! 🎉",
+                            description: "Сейчас откроем WhatsApp для связи",
+                          });
+                          setTimeout(() => {
+                            window.open(`https://wa.me/${phoneNumber}?text=Здравствуйте! Я оплатил(а) Пакет №1 (5888₽). Хочу согласовать дату съемки.`, "_blank");
+                          }, 1000);
+                        }
+                      }, 1000);
                     }}
                   >
                     <Icon name="CreditCard" className="mr-2" size={20} />
@@ -563,11 +576,24 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=9999`, "_blank");
+                      const paymentWindow = window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=9999`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
                       });
+
+                      const checkPayment = setInterval(() => {
+                        if (paymentWindow?.closed) {
+                          clearInterval(checkPayment);
+                          toast({
+                            title: "Спасибо за оплату! 🎉",
+                            description: "Сейчас откроем WhatsApp для связи",
+                          });
+                          setTimeout(() => {
+                            window.open(`https://wa.me/${phoneNumber}?text=Здравствуйте! Я оплатил(а) Пакет №2 (9999₽). Хочу согласовать дату съемки.`, "_blank");
+                          }, 1000);
+                        }
+                      }, 1000);
                     }}
                   >
                     <Icon name="CreditCard" className="mr-2" size={20} />
@@ -625,11 +651,24 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=14999`, "_blank");
+                      const paymentWindow = window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=14999`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
                       });
+
+                      const checkPayment = setInterval(() => {
+                        if (paymentWindow?.closed) {
+                          clearInterval(checkPayment);
+                          toast({
+                            title: "Спасибо за оплату! 🎉",
+                            description: "Сейчас откроем WhatsApp для связи",
+                          });
+                          setTimeout(() => {
+                            window.open(`https://wa.me/${phoneNumber}?text=Здравствуйте! Я оплатил(а) Пакет №3 (14999₽). Хочу согласовать дату съемки.`, "_blank");
+                          }, 1000);
+                        }
+                      }, 1000);
                     }}
                   >
                     <Icon name="CreditCard" className="mr-2" size={20} />
@@ -688,11 +727,24 @@ const Index = () => {
                     className="w-full text-lg py-6" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=35000`, "_blank");
+                      const paymentWindow = window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=35000`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
                       });
+
+                      const checkPayment = setInterval(() => {
+                        if (paymentWindow?.closed) {
+                          clearInterval(checkPayment);
+                          toast({
+                            title: "Спасибо за оплату! 💍",
+                            description: "Сейчас откроем WhatsApp для связи",
+                          });
+                          setTimeout(() => {
+                            window.open(`https://wa.me/${phoneNumber}?text=Здравствуйте! Я оплатил(а) свадебный пакет "Ничего лишнего" (35000₽). Хочу согласовать дату свадьбы.`, "_blank");
+                          }, 1000);
+                        }
+                      }, 1000);
                     }}
                   >
                     <Icon name="CreditCard" className="mr-2" size={20} />
@@ -750,11 +802,24 @@ const Index = () => {
                     className="w-full text-lg py-6 bg-gradient-to-r from-accent to-primary hover:scale-105 transition-all" 
                     size="lg"
                     onClick={() => {
-                      window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=55000`, "_blank");
+                      const paymentWindow = window.open(`https://pay.cloudtips.ru/p/5e712fc5?amount=55000`, "_blank");
                       toast({
                         title: "Переход к оплате",
                         description: "Оплата через СБП — быстро и безопасно",
                       });
+
+                      const checkPayment = setInterval(() => {
+                        if (paymentWindow?.closed) {
+                          clearInterval(checkPayment);
+                          toast({
+                            title: "Спасибо за оплату! 💍",
+                            description: "Сейчас откроем WhatsApp для связи",
+                          });
+                          setTimeout(() => {
+                            window.open(`https://wa.me/${phoneNumber}?text=Здравствуйте! Я оплатил(а) свадебный пакет "Полный фарш" (55000₽). Хочу согласовать дату свадьбы.`, "_blank");
+                          }, 1000);
+                        }
+                      }, 1000);
                     }}
                   >
                     <Icon name="CreditCard" className="mr-2" size={20} />
